@@ -1,0 +1,107 @@
+/* Industry-standard CSS reset */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: sans-serif;
+}
+
+/* Define custom properties for fonts */
+:root {
+    --serif-font: "Georgia", "Times New Roman", Times, serif;
+    --sans-serif-font: "Arial", "Helvetica", sans-serif;
+
+    /* Fluid font scaling using clamp() */
+    --font-size-base: clamp(1rem, 2vw + 1rem, 1.5rem); /* Scales from 1rem to 1.5rem */
+    --font-size-heading: clamp(1.5rem, 3vw + 1rem, 2rem); /* Scales from 1.5rem to 2rem */
+    --font-size-subheading: clamp(1.25rem, 2.5vw + 1rem, 1.75rem); /* Scales from 1.25rem to 1.75rem */
+}
+
+/* Global styling for body */
+body {
+    font-family: var(--sans-serif-font);
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 0 1rem;
+}
+
+/* Styling for header */
+header {
+    padding: 2rem;
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    font-size: var(--font-size-heading);
+    font-family: var(--serif-font);
+    margin-bottom: 1rem;
+}
+
+header h2 {
+    font-size: var(--font-size-subheading);
+    font-family: var(--sans-serif-font);
+}
+
+/* Main section styling */
+main {
+    padding: 0 1rem;
+}
+
+/* Styling for section tags */
+section {
+    background-color: white;
+    padding: 2rem 1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    font-size: var(--font-size-heading);
+    font-family: var(--serif-font);
+    margin-bottom: 1rem;
+}
+
+section p {
+    font-size: var(--font-size-base);
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
+/* Responsive padding for container tags */
+@media screen and (max-width: 768px) {
+    header,
+    section {
+        padding: 1rem;
+    }
+
+    body {
+        padding: 0;
+    }
+}
+
+/* Additional block-level margins */
+h1,
+h2,
+p {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Add general margin for main container */
+main {
+    margin-top: 2rem;
+}
