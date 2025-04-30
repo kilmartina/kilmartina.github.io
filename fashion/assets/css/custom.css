@@ -1,0 +1,13 @@
+/* Add your custom CSS here */
+
+.section-selector-1 { background-color: var(--green-800) }
+
+.section-selector-2 { background-color: var(--gray-200) }
+
+.theme-dark.section-selector-1 a:link,
+.theme-dark.section-selector-1 a:visited { color: var(--green-200) }
+
+.theme-dark.section-selector-1 a:focus,
+.theme-dark.section-selector-1 a:hover,
+.theme-dark.section-selector-1 a:active { color: var(--white-000) }
+
